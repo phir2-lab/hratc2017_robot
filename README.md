@@ -2,8 +2,7 @@
 
 This repository has all one needs to run the competition environment when using the real robot.
 
-
-botar aqui uma foto do robo
+[](hratc2017_robot.jpg "Mine detection robot")
 
 # Organization
 
