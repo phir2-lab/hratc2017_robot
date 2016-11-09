@@ -2,7 +2,7 @@
 
 This repository has all one needs to run the competition environment when using the real robot.
 
-[](hratc2017_robot.jpg "Mine detection robot")
+![Alt text](./hratc2017_robot.jpg?raw=true "Mine detection robot")
 
 # Organization
 
