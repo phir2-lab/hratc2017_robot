@@ -1,0 +1,5 @@
+ACTION=="add", ATTRS{serial}=="A1024GG9", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="imu"
+
+ACTION=="add", ATTRS{serial}=="AH010M3H", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="gps"
+
+ACTION=="add", ATTRS{serial}=="A4006ZQI", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="rosaria"
