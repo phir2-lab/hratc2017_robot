@@ -63,9 +63,9 @@ sudo apt-get install -y ros-indigo-sick-tim
 sudo apt-get install -y ros-indigo-nmea-*
 
 #criação do catkin
-mkdir -p /catkin_tb/src
+mkdir -p ~/catkin_tb/src
 
-cd catkin_tb/src
+cd ~/catkin_tb/src
 
 git clone https://github.com/amor-ros-pkg/rosaria.git
 
@@ -79,17 +79,21 @@ cd launchers
 
 mkdir launch
 
+#TODO: renato, acho q está errado aqui. da onde vem este arquivo .launch 
+# acho q vc esqueceu de dizer onde esta este repo hratc2017_robot
 mv ~/trouble.launch ~/catkin_t/src/launcher/launch/trouble.launch
 
 cd ~/catkin_t
 
 catkin_make
 
+# TODO: aqui vc está assumindo q o username eh trouble.
 echo "source /home/trouble/catkin_tb/devel/setup.bash" >> ~/.bashrc
 
 #configurações de internet, mapeamento usb e comandos via mqtt ao iniciar
 cd ~
 
+#TODO: ler do repo hratc2017_robot !
 sudo mv ~/trouble etc/NetworkManager/system-connections/trouble
 
 sudo mv ~/trouble.rules /etc/udev/rules.d/trouble.rules

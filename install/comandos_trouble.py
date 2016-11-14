@@ -1,4 +1,7 @@
 #!/bin/sh
+# Description: this is script is an alternative way (via mqtt) to access the robot
+# and execute commands such as : shutdown, reset, stop.
+# Author: Renato
 
 import paho.mqtt.client as mqtt
 import os
@@ -21,6 +24,9 @@ def on_message(client, userdata, msg):
 		os.system("sudo reboot");
 
 	if(s == "stop"):
+		# TODO: Renato, nao eh o suficiente matar este nodo.
+		# na competicao cada equipe tera um nodo diferente.
+		# acho melhor mandar stop no cmdvel ou matar o todo o ROS
 		os.system("sudo killall -9 teleop");
 
 	else :
@@ -30,6 +36,7 @@ client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
+# TODO: este IP é mesmo fixo 
 client.connect("10.42.0.1", 1883, 60)
 
 # Blocking call that processes network traffic, dispatches callbacks and
