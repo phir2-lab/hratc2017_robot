@@ -1,2 +1,7 @@
-# hratc2017_robot
-Environment to execute the competition using the real robot
+# Maps
+
+This directory has the maps used in the competition.
+
+**renan, colocar mapas**
+
+ 
