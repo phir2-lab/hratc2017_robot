@@ -9,7 +9,7 @@ To use it in your python script, just import the geoloc file and instantiate the
 
 ### Example
 
-'''python
+```python
 from geoloc import Trilateration
 
 dist1 = 1   # First measured distance 
@@ -19,7 +19,7 @@ dist3 = 1   # Third measured distance
 trilat = Trilateration()
 
 print "Trilaterated point:", trilat.get_point( (dist1, dist2, dist3) )
-'''
+```
 
 There is also an example method in the class, which trilaterates the position of a known point.
 The euclidean distance between the real an trilaterated points is approximately 20 cm.
