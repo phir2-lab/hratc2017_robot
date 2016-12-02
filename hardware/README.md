@@ -28,7 +28,7 @@ The following images show the position of each sensor.
 e outras dimensoes relavantes na imagem**
 
 # Communication Ports
-  # These are the ports mapping the sensors in the CPU:
+  These are the ports mapping the sensors in the CPU:
   - Sick laser: recognized automatically
   - GPS: /dev/gps
   - IMU: /dev/imu
@@ -37,7 +37,7 @@ e outras dimensoes relavantes na imagem**
 
 # Power Distribution
 
- # from robot:
+ from robot:
  - Sick laser: 12v
  - GPS:  5v
  - IMU:  5v
@@ -46,7 +46,7 @@ e outras dimensoes relavantes na imagem**
  - USB hub: 5v
  - wifi: 5v
 
- # from own battery(Power 4200mah 12v):
+ from own battery(Power 4200mah 12v):
  - Raspberry PI: 5v
 
 # Simplified Schematics
