@@ -45,6 +45,7 @@ e outras dimensoes relavantes na imagem**
  - Robot base: 12v
  - USB hub: 5v
  - wifi: 5v
+ 
  from own battery(Power 4200mah 12v):
  - Raspberry PI: 5v
 # Simplified Schematics
