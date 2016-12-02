@@ -46,6 +46,7 @@ e outras dimensoes relavantes na imagem**
  - USB hub: 5v
  - wifi: 5v
 
+
  from own battery(Power 4200mah 12v):
  - Raspberry PI: 5v
 
