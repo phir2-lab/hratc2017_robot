@@ -48,6 +48,7 @@ e outras dimensoes relavantes na imagem**
  
  from own battery(Power 4200mah 12v):
  - Raspberry PI: 5v
+ 
 # Simplified Schematics
 
 **renato, colocar um esquemático simplificado. Pode ser fritizing**
