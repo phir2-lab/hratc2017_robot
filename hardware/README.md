@@ -28,33 +28,29 @@ The following images show the position of each sensor.
 e outras dimensoes relavantes na imagem**
 
 # Communication Ports
-
-**renato, colocar as portas de cada um **
-
-These are the ports mapping the sensors in the CPU:
-- Sick laser: 
-- GPS:
-- IMU:
-- Metal detector:
-- Robot base:
+  # These are the ports mapping the sensors in the CPU:
+  - Sick laser: recognized automatically
+  - GPS: /dev/gps
+  - IMU: /dev/imu
+  - Metal detector: recognized automatically
+  - Robot base: /dev/rosaria
 
 # Power Distribution
 
-**renato, dizer da onde vem a energia (base do robo ou bateria extra) e a tensão**
+ # from robot:
+ - Sick laser: 12v
+ - GPS:  5v
+ - IMU:  5v
+ - Metal detector: 12v
+ - Robot base: 12v
+ - USB hub: 5v
+ - wifi: 5v
 
-- Sick laser: 
-- GPS:
-- IMU:
-- Metal detector:
-- Robot base:
-- USB hub:
-- Raspberry PI: 
-- wifi:
+ # from own battery(Power 4200mah 12v):
+ - Raspberry PI: 5v
 
 # Simplified Schematics
 
 **renato, colocar um esquemático simplificado. Pode ser fritizing**
-
-
 
 
