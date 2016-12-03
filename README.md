@@ -34,13 +34,15 @@ All launch files for testing the robot and for executing the competition.
 # Contributions
 
  - Hardware design and integration with Pioneer by Renato and Augusto Bergamin;
- - Sensor support 3D models by Henry Nunes;
+ - Sensor support 3D models in SolidWorks by Henry Nunes;
+ - Conversion from SolidWorks to Gazebo by XXXX, 
  - Launch files by Renato and Renan Maidana;
  - Maps by Renan Maidana;
- - install script by Renato and [Alexandre Amory](https://amamory.github.io/) 
+ - Install script by Renato.
  
  
-By [Autonomous System Laboratory(LSA)](https://lsa.pucrs.br/) - [Computer Science Graduate Program (PPGCC)](http://www.pucrs.br/facin/ppgcc-english/);
-
-
-
+# Organized By 
+ - [prof. Dr Alexandre Amory](https://amamory.github.io/). [Autonomous System Laboratory(LSA)](https://lsa.pucrs.br/) - [Computer Science Graduate Program (PPGCC)](http://www.pucrs.br/facin/ppgcc-english/);
+ - [prof. Dr Edson Prestes](http://www.inf.ufrgs.br/~prestes/site/Welcome.html). [Phi - Robotics Research Groupy(phi)](http://www.inf.ufrgs.br/phi-group/phi-r2/Welcome.html) - [Computer Science Graduate Program (PPGC)](http://www.inf.ufrgs.br/ppgc/);
+ - [Raj Madhavan](). [HumRobTech, LLC](http://www.robotics.umd.edu/faculty/madhavan-raj) - [IEEE RAS-SIGHT](http://www.ieee-ras.org/ras-sight).
+ 

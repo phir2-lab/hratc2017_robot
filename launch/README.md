@@ -19,7 +19,7 @@ Full launch file. Runs the following packages (dependencies):
 
 These are the topics available for the robot.
 
-| Topic Name | Topic Tupe |
+| Topic Name | Topic Type |
 | --- | --- |
 | blablabla | blablabla |
 | blablabla | blablabla |
