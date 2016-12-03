@@ -1,4 +1,5 @@
 # HRATC 2017 Launch Files
+
 Launch files for the HRATC 2017 robot
 
 ## Files
@@ -11,3 +12,16 @@ Full launch file. Runs the following packages (dependencies):
 * robot_localization
 * tf
 * rosserial
+* hokuyo_node
+
+
+## Topic List
+
+These are the topics available for the robot.
+
+| Topic Name | Topic Tupe |
+| --- | --- |
+| blablabla | blablabla |
+| blablabla | blablabla |
+
+
