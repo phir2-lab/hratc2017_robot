@@ -11,7 +11,7 @@ Full launch file. Runs the following packages (dependencies):
 * sick_tim
 * robot_localization
 * tf
-* rosserial
+* metal_detector_msgs
 * hokuyo_node
 
 
