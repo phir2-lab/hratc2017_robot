@@ -1,7 +1,7 @@
 # Geo-Localization
 
-This is a simple python script which implements a class with methods for trilateration of 2D points in the real world, returning their geodesic coordinates.
-You must provide (as a list) the real line-of-sight distances from your fixed points to the target point, though.
+This is a simple python script which implements a class with methods for trilateration of 2D points in the real world, returning their geodetic coordinates.
+You must provide (as a list) the real line-of-sight distances from your fixed points to the target point.
 
 ## Usage
 
