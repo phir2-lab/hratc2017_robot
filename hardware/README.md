@@ -10,7 +10,7 @@ This is a list of used resources:
 1. [GPS ultimate breakout v3 adafruit](https://www.adafruit.com/product/746)
 2. [Laser Sick_tim551-2050001](https://www.sick.com/us/en/detection-and-ranging-solutions/2d-laser-scanners/tim5xx/tim551-2050001/p/p343045). Top laser.
 3. [IMU ch robotics um6](http://www.chrobotics.com/shop/orientation-sensor-um6)
-4. [Laser Hokuyo URG-04LX-UG01](https://www.hokuyo-aut.jp/02sensor/07scanner/urg_04lx_ug01.html). Bottom laser, facing downwards with an angle of 37o.
+4. [Laser Hokuyo URG-04LX-UG01](https://www.hokuyo-aut.jp/02sensor/07scanner/urg_04lx_ug01.html). Bottom laser, facing downwards with an angle of 55o.
 5. [Wifi adaptator - tp-link wn722n](http://www.tp-link.com/en/download/TL-WN722N.html)
 6. [Metal detector](https://github.com/ras-sight/metal_detector_msgs). 6.1 and 6.2 are, respectivelly, the left and the right sided coils.
 7. [Pionner P3-AT](http://www.mobilerobots.com/ResearchRobots/P3AT.aspx)
