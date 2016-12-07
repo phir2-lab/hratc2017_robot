@@ -20,6 +20,7 @@ Full launch file. Runs the following packages (dependencies):
 These are the topics available for the robot.
 
 | Ros topic name                      | Ros topic type                        |
+| ----------------------------------- | ------------------------------------- |
 | /RosAria/battery_recharge_state     | std_msgs/Int8                         |
 | /RosAria/battery_state_of_charge    | std_msgs/Float32                      |
 | /RosAria/battery_voltage            | std_msgs/Float64                      |
