@@ -39,7 +39,7 @@ These are the topics available for the robot.
 | /imu/temperature                    | std_msgs/Float32                      |
 | /laser/parameter_descriptions       | dynamic_reconfigure/ConfigDescription |
 | /laser/parameter_updates            | dynamic_reconfigure/Config            |
-| /metal_detector                     | metal_detector_msgs/Coil              |
+| /metal_detector                     | [metal_detector_msgs/Coil](https://raw.githubusercontent.com/lsa-pucrs/metal_detector_msgs/lsa-metal-detector/msg/Coil.msg)          |
 | /odometry/filtered                  | nav_msgs/Odometry                     |
 | /odometry/gps                       | nav_msgs/Odometry                     |
 | /rosout                             | rosgraph_msgs/Log                     |
