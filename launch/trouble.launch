@@ -16,7 +16,7 @@
 
     <include file="$(find metal_detector_msgs)/launch/detector.launch" />
 
-    <node name="hokuyo_node" pkg="hokuyo_node" type="hokuyo_node" args="_port:=/dev/hokuyo">
+    <node name="hokuyo_node" pkg="hokuyo_node" type="hokuyo_node" args="_port:=/dev/hokuyo scan:=/scan_hokuyo">
         </node>
 
 	<node name="tf_Imu" pkg="tf" type="static_transform_publisher" args="-0.029 -0.125 0.51 0 0 0 base_link imu_link 10">
