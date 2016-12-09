@@ -35,11 +35,12 @@ All launch files for testing the robot and for executing the competition. It als
 
  - Hardware design and integration with Pioneer by Renato Silveira and Augusto Bergamin;
  - Sensor support 3D models in SolidWorks by Henry Nunes;
- - Conversion from SolidWorks to Gazebo by XXXX, 
+ - Conversion from SolidWorks to Gazebo by Renan Maffei;
  - Launch files by Renato and Renan Maidana;
  - Maps by Renan Maidana;
  - Street View photos by Augusto Bergamin;
- - Install script by Renato Silveira.
+ - Install script by Renato Silveira;
+ - Readmes edits by Alexandre Amory.
  
  
 # Organized By 
