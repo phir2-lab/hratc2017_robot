@@ -62,4 +62,4 @@ subscribes (inward) to the topic.
 For the cases where a node has no connections, that node simply publishes data which is not (yet) used explicitly by any other node. For example,
 the "/detector" node publishes to the topic "/metal_detector", but that topic is not subscribed by any other node. 
 
-![Alt text](./nodes_graph.png?raw=true "Nodes graph")
+![alt text](https://github.com/lsa-pucrs/hratc2017_robot/tree/master/launch/nodes_graph.png?raw=true "Nodes graph")
