@@ -29,7 +29,7 @@ It has all the 3D models (SolidWorks files and the gazebo meshes) used in the ro
 
 - launch
 
-All launch files for testing the robot and for executing the competition.
+All launch files for testing the robot and for executing the competition. It also describe all topics and used nodes.
 
 # Contributions
 
