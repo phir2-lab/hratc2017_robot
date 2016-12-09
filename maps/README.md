@@ -14,9 +14,4 @@ The following images show the surrouding areas close to the test arena.
 ![Alt text](./math_building.png?raw=true "Near the test arena")
 
 ![Alt text](./arena.png?raw=true "Inside the test arena")
-
-
-
-**renan, colocar mapas**
-
  

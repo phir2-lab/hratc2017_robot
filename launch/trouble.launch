@@ -1,5 +1,4 @@
 <launch>
-	
         <node name="RosAria" pkg="rosaria" type="RosAria" args="_port:=/dev/rosaria">
 	</node>
 
@@ -20,13 +19,12 @@
     <node name="hokuyo_node" pkg="hokuyo_node" type="hokuyo_node" args="_port:=/dev/hokuyo scan:=/scan_hokuyo">
         </node>
 
-	<node name="tf_Imu" pkg="tf" type="static_transform_publisher" args="-0.029 -0.125 0.51 0 0 0 base_link imu_link 10">
+	<node name="tf_Imu" pkg="tf" type="static_transform_publisher" args="-0.029 -0.125 0.5425 0 0 0 base_link imu_link 10">
         </node>
 
-	<node name="tf_Laser" pkg="tf" type="static_transform_publisher" args="-0.029 0 0.535 0 0 0 base_link laser 10">
+	<node name="tf_Laser" pkg="tf" type="static_transform_publisher" args="-0.029 0 0.6025 0 0 0 base_link laser 10">
         </node>
 
-    <node name="tf_Laser_Hokuyo" pkg="tf" type="static_transform_publisher" args="0.06 0 0.415 0 0.610865 0 base_link laser2 10">
+    <node name="tf_Laser_Hokuyo" pkg="tf" type="static_transform_publisher" args="0.06 0 0.4125 0 0.610865 0 base_link laser2 10">
         </node>
-	
 </launch>
