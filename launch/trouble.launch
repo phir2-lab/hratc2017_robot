@@ -1,0 +1,32 @@
+<launch>
+	
+        <node name="RosAria" pkg="rosaria" type="RosAria" args="_port:=/dev/rosaria">
+	</node>
+
+        <node name="imu" pkg="um6" type="um6_driver" args="_port:=/dev/imu">
+	</node>
+
+	<node name="gps" pkg="nmea_navsat_driver" type="nmea_serial_driver" args="_port:=/dev/gps _baud:=9600 fix:=/gps/fix">
+        </node>
+
+	<node name="laser" pkg="sick_tim" type="sick_tim551_2050001" args="">
+        </node>
+
+	<node name="robot_localization" pkg="robot_localization" type="navsat_transform_node" args="odom:=/RosAria/pose gps:=/gps/fix imu:=/imu/data">
+        </node>
+
+    <include file="$(find metal_detector_msgs)/launch/detector.launch" />
+
+    <node name="hokuyo_node" pkg="hokuyo_node" type="hokuyo_node" args="_port:=/dev/hokuyo scan:=/scan_hokuyo">
+        </node>
+
+	<node name="tf_Imu" pkg="tf" type="static_transform_publisher" args="-0.029 -0.125 0.51 0 0 0 base_link imu_link 10">
+        </node>
+
+	<node name="tf_Laser" pkg="tf" type="static_transform_publisher" args="-0.029 0 0.535 0 0 0 base_link laser 10">
+        </node>
+
+    <node name="tf_Laser_Hokuyo" pkg="tf" type="static_transform_publisher" args="0.06 0 0.415 0 0.610865 0 base_link laser2 10">
+        </node>
+	
+</launch>
