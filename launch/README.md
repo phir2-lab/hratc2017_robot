@@ -53,8 +53,13 @@ These are the topics available for the robot.
 
 
 
-## Topic view with rqt_graph
+## Nodes
 
-This image shows how the above mentioned topics are connected.
+The image below shows how the robot's nodes are connected via their topics in a graph (viewed using [rqt_graph](http://wiki.ros.org/rqt_graph)).
+The circles represent the nodes, while the boxes represent the topics. The arrows' direction indicates whether a node publishes (outward) or
+subscribes (inward) to the topic.
 
-![Alt text](./rqt_graph.png?raw=true "Topics graph")
+For the cases where a node has no connections, that node simply publishes data which is not (yet) used explicitly by any other node. For example,
+the "/detector" node publishes to the topic "/metal_detector", but that topic is not subscribed by any other node. 
+
+![Alt text](./nodes_graph.png?raw=true "Nodes graph")
