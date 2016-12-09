@@ -25,11 +25,8 @@ The software running on the Raspberry Pi is described in the install directory.
 
 # Sensor Position
 
-The sensor are placed on top of the support described in the model directory.
-The following images show the position of each sensor.
-
-**Renato, pegar screenshots do cavalete e colocar as dimensoes em relacao ao centro do robo
-e outras dimensoes relavantes na imagem**
+The sensor are placed on top of the support described in the model directory, as shown in the image above.
+The exact position of each sensor can be found in the [launch file](../launch/trouble.launch), in the TF section.
 
 # Communication Ports
   These are the ports mapping the sensors in the CPU:
@@ -52,9 +49,4 @@ e outras dimensoes relavantes na imagem**
 
  from own battery(Power 4200mah 12v):
  - Raspberry PI: 5v
- 
-# Simplified Schematics
-
-**renato, colocar um esquemático simplificado. Pode ser fritizing**
-
 
