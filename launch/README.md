@@ -50,3 +50,11 @@ These are the topics available for the robot.
 | /tf_static                          | tf2_msgs/TFMessage                    |
 | /time_reference                     | sensor_msgs/TimeReference             |
 | /vel                                | geometry_msgs/TwistStamped            |
+
+
+
+## Topic view with rqt_graph
+
+This image shows how the above mentioned topics are connected.
+
+![Alt text](./rqt_graph.png?raw=true "Topics graph")
