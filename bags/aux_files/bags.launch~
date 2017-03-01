@@ -1,0 +1,16 @@
+<!-- Launch file to run rosbag and rviz together -->
+<launch>
+
+	<!-- Tell packages to use simulation time instead of ROS time -->
+	<param name="use_sim_time" value="true" />
+
+	<!-- Transform from map to odom so rviz is happy -->
+	<node pkg="tf" type="static_transform_publisher" name="tf_static" args="0 0 0 0 0 0 1 map odom 100" />
+
+	<!-- Run rviz with config file -->
+	<node pkg="rviz" type="rviz" name="rviz_node" args="-d ../rviz/config.rviz" />
+
+	<!-- Play rosbag -->
+	<node pkg="rosbag" type="play" name="player" output="screen" args="--clock ../hratc_square_1969-12-31-21-51-39.bag" />
+
+</launch>

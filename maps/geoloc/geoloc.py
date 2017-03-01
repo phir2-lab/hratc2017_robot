@@ -17,7 +17,7 @@ class Trilaterate():
 		self.c = (-30.060258, -51.173651)
 		self.earthR = 6371	#assuming elevation = 0
 
-	def set_fixed_points(points):
+	def set_fixed_points(self, points):
 		'''
 		Method for changing the fixed points in trilateration
 
