@@ -8,21 +8,21 @@ The file "coords.txt" contains the corners' coordinates, which can be seen below
 
 ## Topics in the bag
 
-1. Laser scanners
+Laser scanners
 * /scan
 * /scan_hokuyo
 
-2. Wheel Odometry
+Wheel Odometry
 * /RosAria/pose
 
-3. IMU
+IMU
 * /imu/data
 * /imu/mag
 
-4. GPS
+GPS
 * /gps/fix
 
-5. Transforms
+Transforms
 * /tf
 
 ## Usage
