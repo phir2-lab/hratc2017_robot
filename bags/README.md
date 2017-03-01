@@ -1,6 +1,6 @@
 # Bags for the Testing Phase
 
-This directory contains a ROS bag of the robot operating in the arena. A square trajectory was performed, with 5 corners georeferrenced (P1, ... , P5).
+This directory contains a ROS bag of the robot operating in the arena. A square trajectory was performed, with 5 corners (P1, ... , P5) and obstacles georeferenced.
 
 The file "coords.txt" contains the corners' coordinates, which can be seen below:
 
@@ -9,21 +9,21 @@ The file "coords.txt" contains the corners' coordinates, which can be seen below
 ## Topics in the bag
 
 1. Laser scanners
-..* /scan
-..* /scan_hokuyo
+* /scan
+* /scan_hokuyo
 
 2. Wheel Odometry
-..* /RosAria/pose
+* /RosAria/pose
 
 3. IMU
-..* /imu/data
-..* /imu/mag
+* /imu/data
+* /imu/mag
 
 4. GPS
-..* /gps/fix
+* /gps/fix
 
 5. Transforms
-..* /tf
+* /tf
 
 ## Usage
 
