@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import yaml
 import geoloc
 
 #Instantiate trilaterator class
@@ -51,13 +52,24 @@ p6 = locator.get_point((p6a, p6b, p6c))
 p7 = locator.get_point((p7a, p7b, p7c))
 
 f.write("\nVirtual Arena:")
-f.write("\n\tP1: " + str(p1[0]) + "," + str(p1[1]))
-f.write("\n\tP2: " + str(p2[0]) + "," + str(p2[1]))
-f.write("\n\tP3: " + str(p3[0]) + "," + str(p3[1]))
-f.write("\n\tP4: " + str(p4[0]) + "," + str(p4[1]))
-f.write("\n\tP5: " + str(p5[0]) + "," + str(p5[1]))
-f.write("\n\tP6: " + str(p6[0]) + "," + str(p6[1]))
-f.write("\n\tP7: " + str(p7[0]) + "," + str(p7[1]))
+f.write("\n\tGlobal Coordinates:")
+f.write("\n\t\tP0:\t-30.0602102056,-51.1738922207")
+f.write("\n\t\tP1:\t" + str(p1[0]) + "," + str(p1[1]))
+f.write("\n\t\tP2:\t" + str(p2[0]) + "," + str(p2[1]))
+f.write("\n\t\tP3:\t" + str(p3[0]) + "," + str(p3[1]))
+f.write("\n\t\tP4:\t" + str(p4[0]) + "," + str(p4[1]))
+f.write("\n\t\tP5:\t" + str(p5[0]) + "," + str(p5[1]))
+f.write("\n\t\tP6:\t" + str(p6[0]) + "," + str(p6[1]))
+f.write("\n\t\tP7:\t" + str(p7[0]) + "," + str(p7[1]))
+
+f.write("\n\tLocal Coordinates (relative to P0):")
+f.write("\n\t\tP0:\t0.0,\t\t0.0")
+with open("../../settings/minefield.yaml", "r") as stream:
+		yaml_minefield = yaml.load(stream)
+		mf_corners = yaml_minefield['minefield']
+		for i in range(1, len(mf_corners)+1):
+			corner_name = "corner{}".format(i)
+			f.write("\n\t\tP{}:\t{},\t{}".format(i, mf_corners[corner_name]['latitude'], mf_corners[corner_name]['longitude']))
 
 #Obstacles
 well = locator.get_point((wellA, wellB, wellC))
@@ -65,10 +77,16 @@ post = locator.get_point((postA, postB, postC))
 tree = locator.get_point((treeA, treeB, treeC))
 
 f.write("\n\nObstacles:")
-f.write("\n\tWell: " + str(well[0]) + "," + str(well[1]))
-f.write("\n\tPost: " + str(post[0]) + "," + str(post[1]))
-f.write("\n\tTree: " + str(tree[0]) + "," + str(tree[1]))
+f.write("\n\tGlobal Coordinates:")
+f.write("\n\t\tWell: " + str(well[0]) + "," + str(well[1]))
+f.write("\n\t\tPost: " + str(post[0]) + "," + str(post[1]))
+f.write("\n\t\tTree: " + str(tree[0]) + "," + str(tree[1]))
+f.write("\n\tLocal Coordinates (relative to P0):")
+f.write("\n\t\tWell: 10.8414412908,-2.0325296335")
+f.write("\n\t\tPost: 6.6759533706,\t-1.1691806717")
+f.write("\n\t\tTree: -1.1745529239,-0.6197298011")
 
 f.write("\n\nNOTE: P7 = Well")
+f.write("\nNOTE: P0 = Center")
 
 f.close()
