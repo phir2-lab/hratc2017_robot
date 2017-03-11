@@ -1,0 +1,50 @@
+<launch>
+
+	<!-- Launch baseline localization -->
+	<!-- Insert here your own localization solution or tune robot_pose_ekf's parameters to improve your position estimation -->
+	<node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf" >
+		<remap from="robot_pose_ekf/odom_combined" to="robot_pose_ekf/odom"/>
+		<remap from="odom" to="RosAria/pose_cov_corrected"/>
+		<remap from="imu_data" to="imu/data"/>
+		<remap from="vo" to="gps/odom"/>
+		<param name="output_frame" value="odom"/>
+		<param name="freq" value="100.0"/>
+		<param name="sensor_timeout" value="1.0"/>
+		<param name="odom_used" value="true"/>
+		<param name="imu_used" value="true"/>
+		<param name="imu_absolute" value="false"/>
+		<param name="vo_used" value="false"/>
+		<param name="gps_used" value="false"/>
+		<param name="debug" value="false"/>
+		<param name="self_diagnose" value="false"/>
+		<param name="base_footprint_frame" value="base_link" />
+	</node>
+
+	<!-- The HRATC judge -->
+	<node name="judge" pkg="hratc2017_framework"  type="judge" output="screen">
+		<rosparam file="$(find hratc2017_robot)/settings/minefield.yaml" command="load" />
+		<rosparam file="$(find hratc2017_robot)/settings/judge.yaml" command="load" />
+		<rosparam file="$(find hratc2017_robot)/description/worlds/coordinates.yaml" command="load" />
+		<param name="~isSimulation" value="false"/>    
+	</node>
+	    
+	<!-- The minefield frame -->
+	<node name="minefield_static_tf_publisher" pkg="hratc2017_framework" type="minefield_static_tf_publisher" output="screen">
+		<rosparam file="$(find hratc2017_robot)/settings/minefield.yaml" command="load" />
+	</node>
+
+	<node name="minefield_odom_tf_publisher" pkg="tf" type="static_transform_publisher" args="0 0 0 0 1 0 0 minefield odom 10" />
+
+	<!-- The minefield viewer - updates an occupancy grid displaying the covered area -->
+	<node name="mineFieldViewer" pkg="hratc2017_framework"  type="mineFieldViewer"
+	output="screen">
+		<rosparam file="$(find hratc2017_robot)/settings/minefield.yaml" command="load" />
+		<rosparam file="$(find hratc2017_robot)/settings/judge.yaml" command="load" />
+		<rosparam file="$(find hratc2017_robot)/description/worlds/coordinates.yaml" command="load" />
+		<param name="~isSimulation" value="false"/>    
+	</node>
+
+	<!-- Visualization in RVIZ -->
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find hratc2017_framework)/hratc.rviz" /> 
+
+</launch>

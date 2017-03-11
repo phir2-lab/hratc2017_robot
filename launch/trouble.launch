@@ -1,30 +1,28 @@
 <launch>
-        <node name="RosAria" pkg="rosaria" type="RosAria" args="_port:=/dev/rosaria">
-	</node>
+    <!-- Launch robot control and sensors packages -->
+    <node name="RosAria" pkg="rosaria" type="RosAria">
+	<param name="port" value="/dev/rosaria" />
+    </node>
+    
+    <node name="imu" pkg="um6" type="um6_driver" args="_port:=/dev/imu" />
+	<node name="gps" pkg="nmea_navsat_driver" type="nmea_serial_driver" args="_port:=/dev/gps _baud:=9600 _frame_id:=gps_antenna fix:=/gps/fix" />
+	<node name="laser" pkg="sick_tim" type="sick_tim551_2050001" />
+    
+    <node name="hokuyo_node" pkg="hokuyo_node" type="hokuyo_node" args="_port:=/dev/hokuyo scan:=/scan_hokuyo" />
 
-        <node name="imu" pkg="um6" type="um6_driver" args="_port:=/dev/imu">
-	</node>
-
-	<node name="gps" pkg="nmea_navsat_driver" type="nmea_serial_driver" args="_port:=/dev/gps _baud:=9600 fix:=/gps/fix">
-        </node>
-
-	<node name="laser" pkg="sick_tim" type="sick_tim551_2050001" args="">
-        </node>
-
-	<node name="robot_localization" pkg="robot_localization" type="navsat_transform_node" args="odom:=/RosAria/pose gps:=/gps/fix imu:=/imu/data">
-        </node>
-
+    <!-- Launch metal detector package -->
     <include file="$(find metal_detector_msgs)/launch/detector.launch" />
+    
+    <node pkg="hratc2017_framework" type="gps_to_odom" name="gps_to_odom" />
 
-    <node name="hokuyo_node" pkg="hokuyo_node" type="hokuyo_node" args="_port:=/dev/hokuyo scan:=/scan_hokuyo">
+    <!-- Launch baseline localization -->
+    <!-- Insert here your own localization solution or tune robot_pose_ekf's parameters to improve your position estimation -->
+
+    <!-- Provide robot transforms -->
+    <include file="$(find hratc2017_robot)/launch/trouble_transforms.launch" />    
+    <node name="tf_Laser" pkg="tf" type="static_transform_publisher" args="-0.029 0 0.6025 0 0 0 base_link laser 10">
         </node>
-
-	<node name="tf_Imu" pkg="tf" type="static_transform_publisher" args="-0.029 -0.125 0.5425 0 0 0 base_link imu_link 10">
-        </node>
-
-	<node name="tf_Laser" pkg="tf" type="static_transform_publisher" args="-0.029 0 0.6025 0 0 0 base_link laser 10">
-        </node>
-
     <node name="tf_Laser_Hokuyo" pkg="tf" type="static_transform_publisher" args="0.06 0 0.4125 0 0.610865 0 base_link laser2 10">
         </node>
+
 </launch>
