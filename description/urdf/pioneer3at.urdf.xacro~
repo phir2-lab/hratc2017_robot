@@ -15,6 +15,35 @@ name="pioneer3at">
 <xacro:include filename="$(find metal_detector_msgs)/model/gazebo/metal_detector.urdf.xacro" />
 <xacro:include filename="$(find hratc2017_robot)/model/gazebo/Bridge.urdf.xacro" />
 
+    <!-- BASE-FOOTPRINT -->
+    <!-- base_footprint is a fictitious link(frame) that is on the ground right below base_link origin, navigation stack depends on this frame -->
+    <link name="base_footprint">
+        <!--<inertial>
+            <mass value="0.0001" />
+            <origin xyz="0 0 0" />
+            <inertia ixx="0.0001" ixy="0.0" ixz="0.0"
+                iyy="0.0001" iyz="0.0" 
+                izz="0.0001" />
+	      </inertial>-->
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 180" />
+            <geometry>
+                <box size="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+    </link>
+
+    <gazebo reference="base_footprint">
+        <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+
+    <joint name="base_footprint_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="0 0 0" />
+        <parent link="base_footprint"/>
+        <child link="base_link" />
+    </joint>
+
 <!-- Chassis -->
     <link name="base_link">
         <!--  For pointers on inertial and gazebo-related parameters see
@@ -30,7 +59,7 @@ name="pioneer3at">
             <inertia ixx="0.3338" ixy="0.0" ixz="0.0" iyy="0.4783" iyz="0.0" izz="0.3338"/>
         </inertial>
         <visual name="base_visual">
-            <origin xyz="0 0 0.177" rpy="0 0 0"/>
+            <origin xyz="0 0 0.177" rpy="0 0 180"/>
             <geometry name="pioneer_geom">
                 <mesh filename="package://hratc2017_framework/description/p3at_meshes/chassis.stl"/>
             </geometry>
@@ -39,7 +68,7 @@ name="pioneer3at">
             </material>
         </visual>
         <collision>
-            <origin xyz="0 0 0.177" rpy="0 0 0"/>
+            <origin xyz="0 0 0.177" rpy="0 0 180"/>
             <geometry>
                 <mesh filename="package://hratc2017_framework/description/p3at_meshes/chassis.stl"/>
             </geometry>
