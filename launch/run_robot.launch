@@ -33,7 +33,7 @@
 		<rosparam file="$(find hratc2017_robot)/settings/minefield.yaml" command="load" />
 	</node>
 
-	<node name="minefield_odom_tf_publisher" pkg="tf" type="static_transform_publisher" args="0 0 0 0 1 0 0 minefield odom 10" />
+	<node name="minefield_odom_tf_publisher" pkg="hratc2017_robot" type="minefield_to_odom_tf.py" />
 
 	<!-- The minefield viewer - updates an occupancy grid displaying the covered area -->
 	<node name="mineFieldViewer" pkg="hratc2017_framework"  type="mineFieldViewer"
